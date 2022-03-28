@@ -20,6 +20,9 @@ cc_library_static {
     name: "init_lime",
     srcs: ["init_lime.cpp"],
     whole_static_libs: ["libinit_lime"],
-    include_dirs: ["system/core/init"],
+    include_dirs: [
+        "system/libbase/include",
+        "system/core/init",
+    ],
     recovery_available: true,
 }
