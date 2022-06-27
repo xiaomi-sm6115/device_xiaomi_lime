@@ -23,5 +23,9 @@ ODM_MANIFEST_SKUS += lemon
 ODM_MANIFEST_LEMON_FILES := $(DEVICE_PATH)/manifest/manifest_lemon.xml
 TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
 
+# Init
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):init_lime
+TARGET_RECOVERY_DEVICE_MODULES := libinit_lime
+
 # Inherit from the proprietary version
 include vendor/xiaomi/lime/BoardConfigVendor.mk
