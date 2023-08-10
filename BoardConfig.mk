@@ -18,5 +18,10 @@ BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
 TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb.img
 BOARD_MKBOOTIMG_ARGS += --dtb $(TARGET_PREBUILT_DTB)
 
+# NFC
+ODM_MANIFEST_SKUS += lemon
+ODM_MANIFEST_LEMON_FILES := $(DEVICE_PATH)/manifest/manifest_lemon.xml
+TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
+
 # Inherit from the proprietary version
 include vendor/xiaomi/lime/BoardConfigVendor.mk
