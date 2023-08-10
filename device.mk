@@ -9,6 +9,9 @@ PRODUCT_HARDWARE := lime
 # include sm6115-common
 include device/xiaomi/sm6115-common/common.mk
 
+# Inherit custom packages configuration
+$(call inherit-product, device/xiaomi/lime/custom.mk)
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
