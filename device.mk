@@ -30,5 +30,14 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.uicc.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_lemon/android.hardware.nfc.uicc.xml \
     frameworks/native/data/etc/android.hardware.nfc.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_lemon/android.hardware.nfc.xml
 
+# Overlays
+PRODUCT_PACKAGES += \
+    CarrierConfigOverlay \
+    FrameworksCustomLime \
+    FrameworksResLime \
+    SettingsResLime \
+    SystemUIResLime \
+    TelephonyResLime
+    
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/xiaomi/lime/lime-vendor.mk)
