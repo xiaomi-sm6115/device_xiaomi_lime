@@ -36,7 +36,6 @@ PRODUCT_COPY_FILES += \
 # Overlays
 PRODUCT_PACKAGES += \
     CarrierConfigOverlay \
-    FrameworksCustomLime \
     FrameworksResLime \
     SettingsResLime \
     SystemUIResLime \
