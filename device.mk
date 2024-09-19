@@ -12,9 +12,9 @@ include device/xiaomi/sm6115-common/common.mk
 # Inherit custom packages configuration
 $(call inherit-product, device/xiaomi/lime/custom.mk)
 
-# Soong namespaces
-PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
+# API level
+BOARD_SHIPPING_API_LEVEL := 30
+PRODUCT_SHIPPING_API_LEVEL := 29
 
 # NFC
 PRODUCT_PACKAGES += \
@@ -40,6 +40,10 @@ PRODUCT_PACKAGES += \
     SettingsResLime \
     SystemUIResLime \
     TelephonyResLime
-    
-# Get non-open-source specific aspects
+
+# Soong namespaces
+PRODUCT_SOONG_NAMESPACES += \
+    $(LOCAL_PATH)
+
+# Get non-open-source specific aspects/
 $(call inherit-product, vendor/xiaomi/lime/lime-vendor.mk)
