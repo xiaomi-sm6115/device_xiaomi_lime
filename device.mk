@@ -12,6 +12,10 @@ include device/xiaomi/sm6115-common/common.mk
 # Inherit custom packages configuration
 $(call inherit-product, device/xiaomi/lime/custom.mk)
 
+# AAPT
+PRODUCT_AAPT_CONFIG := normal
+PRODUCT_AAPT_PREF_CONFIG := xxhdpi
+
 # API level
 BOARD_SHIPPING_API_LEVEL := 30
 PRODUCT_SHIPPING_API_LEVEL := 29
